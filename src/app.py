@@ -17,6 +17,12 @@ def index():
 
     return '<h1>Mi primera aplicacion Flask deployeada en Render.<br><br>{}<br>{}<br>{}<br></h1>'.format(username, email, password), 200
 
+
+@app.route('/healthz')
+def healthz():
+    return 'OK', 200
+
+
 def status_404(error):
     return '<h1>404 Not Found</h1>'
 
